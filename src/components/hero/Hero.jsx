@@ -14,6 +14,28 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
+  scrollButon: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      duration: 30,
+      repeat: Infinity,
+      repeatType: "mirror"
+    },
+  },
+  
 };
 
 const Hero = () => {
@@ -26,22 +48,25 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 textVariants={textVariants}>Hi,Im Adnan</motion.h2>
-          <motion.h1 textVariants={textVariants}>
+          <motion.h2 variants={textVariants}>Hi,Im Adnan</motion.h2>
+          <motion.h1 variants={textVariants}>
             Web Developer and SEO Expert
           </motion.h1>
-          <motion.div className="buttons" textVariants={textVariants}>
-            <motion.button textVariants={textVariants}>
+          <motion.div className="buttons" variants={textVariants}>
+            <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
-            <motion.button textVariants={textVariants}>
-              Contact me
-            </motion.button>
+            <motion.button variants={textVariants}>Contact me</motion.button>
           </motion.div>
-          <img src="/scroll.png" alt="" textVariants={textVariants} />
+          <motion.img
+            src="/scroll.png"
+            alt=""
+            animate="scrollButon"
+            variants={textVariants}
+          />
         </motion.div>
       </div>
-      <div className="">MERN Developer and Digital Marketer</div>
+      <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">MERN Developer and Digital Marketer</motion.div>
 
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
