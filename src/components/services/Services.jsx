@@ -28,17 +28,38 @@ const boxItems = [
   },
 ];
 
-
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const Services = () => {
   return (
-    <motion.div className="services">
-      <motion.div className="textContainer">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      // animate="animate"
+      whileInView="animate"
+    >
+      <motion.div className="textContainer" variants={variants}>
         {/* <p>
           I focus on helping your brand grow <br /> and move forward
         </p> */}
       </motion.div>
-      <motion.div className="titleContainer">
+      <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="people" />
           <h1>
@@ -54,8 +75,6 @@ const Services = () => {
       </motion.div>
       <motion.div className="listContainer">
         <div className="box">
-
-         
           {boxItems.map((item) => (
             <motion.div
               whileHover={{ background: "lightgray", color: "black" }}
