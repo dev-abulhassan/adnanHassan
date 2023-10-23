@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 const boxItems = [
   {
     id: 1,
-    title: "Branding",
+    title: "Search Engine Optimization",
     decs: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aliquam voluptatum. Suscipit libero non accusantium? Libero dolorum blanditiis laboriosam corporis!",
     btn: "Go",
   },
   {
     id: 2,
-    title: "Branding",
+    title: "Wordpress",
     decs: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aliquam voluptatum. Suscipit libero non accusantium? Libero dolorum blanditiis laboriosam corporis!",
     btn: "Go",
   },
   {
     id: 3,
-    title: "Branding",
+    title: "Web Design",
     decs: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aliquam voluptatum. Suscipit libero non accusantium? Libero dolorum blanditiis laboriosam corporis!",
     btn: "Go",
   },
   {
     id: 4,
-    title: "Branding",
+    title: "Web Development",
     decs: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aliquam voluptatum. Suscipit libero non accusantium? Libero dolorum blanditiis laboriosam corporis!",
     btn: "Go",
   },
@@ -63,12 +63,12 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="people" />
           <h1>
-            <strong>Unique</strong> Ideas
+            <motion.strong whileHover={{color: "orange"}}>Unique</motion.strong> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <strong>For Your</strong> Business.
+            <motion.strong whileHover={{color: "orange"}}>For Your</motion.strong> Business.
           </h1>
           <button>What we do</button>
         </div>
