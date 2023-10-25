@@ -10,7 +10,7 @@ import Services from "./components/services/Services";
 function App() {
   return (
     <div>
-      <Cursor/>
+      <Cursor />
       <section id="Homepage">
         <Navbar />
         <Hero />
@@ -25,7 +25,7 @@ function App() {
         <Parallax type="portfolio" />
       </section>
       <Portfollio />
-      {/* <section id="About">About</section> */}
+      {/* <section id="About">Coming Soon</section> */}
       <section id="Contact">
         <Contact />
       </section>
